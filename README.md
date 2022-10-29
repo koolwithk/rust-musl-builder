@@ -33,6 +33,12 @@ For a more realistic example, see the `Dockerfile`s for [examples/using-diesel](
 
 With a bit of luck, you should be able to just copy your application binary from `target/x86_64-unknown-linux-musl/release`, and install it directly on any reasonably modern x86_64 Linux machine.  In particular, you should be able make static release binaries using TravisCI and GitHub, or you can copy your Rust application into an [Alpine Linux container][]. See below for details!
 
+## rust-musl-builder arm64 support 
+
+```bash
+docker buildx build --push --platform linux/arm64  -t koolwithk/rust-musl:1.64.0-arm64 .
+```
+
 ## Available tags
 
 In general, we provide the following tagged Docker images:
